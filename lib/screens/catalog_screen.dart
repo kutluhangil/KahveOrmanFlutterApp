@@ -54,7 +54,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
               crossAxisCount: 2,
               crossAxisSpacing: 14,
               mainAxisSpacing: 14,
-              childAspectRatio: 0.72,
+              childAspectRatio: 0.93,
             ),
             itemCount: urunler.length,
             itemBuilder: (context, index) {
