@@ -31,11 +31,23 @@ class _HomePageState extends State<HomePage> {
       );
   }
 
+  void _sepettenCikar(int index) {
+    setState(() => _cart.removeAt(index));
+  }
+
+  void _checkoutTamamla() {
+    setState(() => _cart.clear());
+  }
+
   @override
   Widget build(BuildContext context) {
     final screens = [
       CatalogScreen(onAddToCart: _sepeteEkle),
-      CartScreen(cart: _cart),
+      CartScreen(
+        cart: _cart,
+        onRemove: _sepettenCikar,
+        onCheckout: _checkoutTamamla,
+      ),
     ];
 
     return Scaffold(

@@ -55,7 +55,18 @@ class ProductCard extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 3),
+                  Text(
+                    product.tagline,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: KahveOrmanColors.muted,
+                      fontSize: 11.5,
+                      height: 1.1,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
                   Text(
                     '₺${product.price}',
                     style: const TextStyle(
